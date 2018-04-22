@@ -8,59 +8,24 @@
 		</div> <!--.jumbotron  -->
 
 		<div class="row text-center">
-			<div class="col-lg-3 col-md-6 mb-4">
-					<div class="card">
-							<img class="card-img-top" src="http://placehold.it/240x240" alt="">
-							<div class="card-body">
-							<h4 class="card-title">Card title</h4>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-							</div>
-							<div class="card-footer">
-							<a href="#" class="btn btn-primary">Find Out More!</a>
-							</div>
-					</div>
-			</div> <!-- .col -->
-
-			<div class="col-lg-3 col-md-6 mb-4">
-					<div class="card">
-							<img class="card-img-top" src="http://placehold.it/240x240" alt="">
-									<div class="card-body">
-									<h4 class="card-title">Card title</h4>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-							</div>
-							<div class="card-footer">
-									<a href="#" class="btn btn-primary">Find Out More!</a>
-							</div>
-					</div>
-			</div>	<!-- .col -->
-			
-			<div class="col-lg-3 col-md-6 mb-4">
-					<div class="card">
-							<img class="card-img-top" src="http://placehold.it/240x240" alt="">
-							<div class="card-body">
-									<h4 class="card-title">Card title</h4>
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-							</div>
-							<div class="card-footer">
-									<a href="#" class="btn btn-primary">Find Out More!</a>
-							</div>
-					</div>
-			</div> <!-- .col -->
-			
-			<div class="col-lg-3 col-md-6 mb-4">
-					<div class="card">
-							<img class="card-img-top" src="http://placehold.it/240x240" alt="">
-							<div class="card-body">
-									<h4 class="card-title">Card title</h4>
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-							</div>
-							<div class="card-footer">
-									<a href="#" class="btn btn-primary">Find Out More!</a>
-							</div>
-					</div>
-			</div> <!-- .col -->
-
+			{{#each events}}
+			{{> eventCard }}
+			{{/each}}
 		</div> <!-- .row -->
-
 	</div> <!-- .container  -->
+</template>
+
+<template name="eventCard">
+	<div class="col-lg-3 col-md-6 mb-4">
+		<div class="card">
+			<img class="card-img-top" src="http://placehold.it/240x240" alt="">
+			<div class="card-body">
+			<h4 class="card-title">{{name}}</h4>
+			<p class="card-text">{{description}}</p>
+			</div>
+			<div class="card-footer">
+			<a href="/events/{{_id}}" class="btn btn-primary">Find Out More!</a>
+			</div>
+		</div>
+	</div> <!-- .col -->
 </template>
