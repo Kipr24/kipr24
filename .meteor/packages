@@ -23,8 +23,9 @@ kadira:flow-router
 kadira:blaze-layout
 anti:fake
 accounts-facebook
-accounts-meetup
 
 
 stylus@=2.513.13
 ian:accounts-ui-bootstrap-3
+
+service-configuration

@@ -9,4 +9,4 @@ import '/imports/ui/layouts/WelcomeLayout/WelcomeLayout.html';
 
 import '/imports/ui/pages/WelcomePage/WelcomePage.js';
 
-import '/imports/ui/components/Navigation/Navigation.html';
+import '/imports/ui/components/Navigation/Navigation.js';
