@@ -9,6 +9,15 @@ exposed.route('/', {
     }
 });
 
+exposed.route('/events', {
+  name: 'Event.List',
+  action() {
+    BlazeLayout.render('MainLayout', {
+      content: 'EventsPage'
+    })
+  }
+})
+
 exposed.route('/events/:eventId', {
   name: 'Event.Show',
   action(params) {

@@ -1,14 +1,21 @@
 // import routes
 import '/imports/startup/client/routes.js';
 
-// import helpers
+// Global Helpers
 import '/imports/startup/client/helpers.js';
 
-// import layouts, pages and components
+// Layouts
 import '/imports/ui/layouts/WelcomeLayout/WelcomeLayout.html';
 import '/imports/ui/layouts/MainLayout/MainLayout.html';
 
+// Welcome Page
 import '/imports/ui/pages/WelcomePage/WelcomePage.js';
+
+// Event Page
 import '/imports/ui/pages/EventPage/EventPage.js';
 
+// Navigation Component
 import '/imports/ui/components/Navigation/Navigation.js';
+
+// Event List Page
+import '/imports/ui/pages/EventsPage/EventsPage.js';

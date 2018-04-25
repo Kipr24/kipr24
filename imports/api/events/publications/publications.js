@@ -7,3 +7,7 @@ Meteor.publish('top4', function() {
 Meteor.publish('singleEvent', function(eventId) {
     return Events.find({_id: eventId});
 });
+
+Meteor.publish('events', function() {
+    return Events.find();
+});
