@@ -19,3 +19,5 @@ import '/imports/ui/components/Navigation/Navigation.js';
 
 // Event List Page
 import '/imports/ui/pages/EventsPage/EventsPage.js';
+
+import '/imports/ui/pages/NewEventPage/NewEventPage.js';

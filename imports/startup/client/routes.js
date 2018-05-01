@@ -1,3 +1,14 @@
+const authenticated = FlowRouter.group({});
+
+authenticated.route('/events/new', {
+  name: 'Event.Add',
+  action() {
+    BlazeLayout.render('MainLayout', {
+      content: 'NewEventPage'
+    })
+  }
+})
+
 const exposed = FlowRouter.group();
 
 exposed.route('/', {
@@ -26,3 +37,4 @@ exposed.route('/events/:eventId', {
     })
   }
 });
+

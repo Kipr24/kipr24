@@ -19,3 +19,7 @@ https://codepen.io/EderIraizoz/pen/aOQxxy
 
 ### zooming background images ###
 https://css-tricks.com/zooming-background-images/
+
+### EventsPage bootstrap3 prototype ###
+https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/d60375c3ac5fc459ec7e30a126559d6dd0d26469/index.html
+

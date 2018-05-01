@@ -10,12 +10,36 @@
       </button>
     </div>
     <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/events">Events</a></li>
-      </ul>
+      {{> NavigationLinks}}
       <ul class="nav navbar-nav navbar-right">
         {{> loginButtons}}
       </ul>
     </div>
   </div>
+</template>
+
+<template name="NavigationLinks">
+
+    {{#if isInRole 'admin,editor'}}
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/events">List</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/events/new">Add New</a></li>
+            </ul>
+          </li>
+
+          <li class=""><a href="/venues">Venues</a></li>
+
+      </ul>
+    {{else}} 
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/events">Events</a></li>
+        <li class=""><a href="/venues">Venues</a></li>
+      </ul>
+    {{/if}}
+
 </template>
