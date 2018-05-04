@@ -7,7 +7,16 @@ authenticated.route('/events/new', {
       content: 'NewEventPage'
     })
   }
-})
+});
+
+authenticated.route('/venues/new', {
+  name: 'Venue.Add',
+  action() {
+    BlazeLayout.render('MainLayout', {
+      content: 'NewVenuePage'
+    })
+  }
+});
 
 const exposed = FlowRouter.group();
 
@@ -38,3 +47,11 @@ exposed.route('/events/:eventId', {
   }
 });
 
+exposed.route('/venues', {
+  name: 'Venue.List',
+  action() {
+    BlazeLayout.render('MainLayout', {
+      content: 'VenuesPage'
+    })
+  }
+});

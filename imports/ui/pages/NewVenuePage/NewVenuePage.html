@@ -1,0 +1,12 @@
+<template name='NewVenuePage'>
+    <div class="container">
+        {{#autoForm collection=data id="insertVenueForm" type="insert"}}
+        <fieldset>
+            <legend>Add a venue</legend>
+            {{> afQuickField name='name'}}
+            {{> afQuickField name='description' rows=4}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Save</button>
+        {{/autoForm}}
+    </div>
+</template>

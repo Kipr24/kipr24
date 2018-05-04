@@ -7,7 +7,7 @@ Template.EventsPage.onCreated(function() {
     tpl.autorun(function() { 
        tpl.subscribe('events');  
     });
-})
+});
 
 Template.EventsPage.helpers({
     events: function() {

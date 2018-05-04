@@ -1,4 +1,4 @@
-import Events from "../events";
+import Events from "/imports/api/events/events.js";
 
 Meteor.publish('top4', function() {
     return Events.find({}, {limit: 4});
