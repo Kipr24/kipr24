@@ -1,5 +1,45 @@
 <template name='VenuesPage'>
-    <div class="container">
-        <h1>List venues</h1>
-    </div>
-</template>
+<!-- Content -->
+<div class="container">
+        <div class="row">
+          <!-- sidebar fixed -->
+          <div class="col-lg-2">
+              <ul id="sidebar" class="nav nav-stacked affix">
+                <li><a href="#">Limassol</a></li>
+                <li><a href="#">Nicosia</a></li>
+                <li><a href="#">Paphos</a></li>
+                <li><a href="#">Larnaka</a></li>
+                <li><a href="#">Kyrenia</a></li>
+                <li><a href="#">Ammohostos</a></li>
+            </ul>
+          </div>
+      
+          <!-- content -->
+          <div class="col-lg-10">
+            <div class="row">
+      
+              {{#each venues}}
+      
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card h-100">
+                  <a href="/venues/{{_id}}"><img class="card-img-top" src="http://placehold.it/240x240" alt=""></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="/venues/{{_id}}">{{name}}</a>
+                    </h4>
+                    <h5>location</h5>
+                    <p class="card-text">{{truncate (description)}}</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  </div>
+                </div>
+              </div>
+      
+              {{/each}}
+        
+            </div> <!-- /.row -->
+          </div>  <!-- col-sm-9 -->
+        </div> <!-- row -->
+      </div> <!-- container -->
+      </template>
