@@ -5,7 +5,9 @@
             <legend>Add a venue</legend>
             {{> afQuickField name='name'}}
             {{> afQuickField name='description' rows=4}}
+            {{> afFieldInput name="district" options=districtOption}}
         </fieldset>
+        <div class="divider"></div>
         <button type="submit" class="btn btn-primary">Save</button>
         {{/autoForm}}
     </div>

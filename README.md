@@ -1,5 +1,13 @@
-# kipr24 #
+# Kipr24 #
 http://kipr24.com application repo
+
+## BACKLOG ##
+- [x] add district to venues
+- [ ] add category to venue
+- [ ] add location to venues
+- [ ] fileter venues by district
+- [ ] filter venue by category
+
 
 ## stock ##
 https://mobirise.com/bootstrap-4-theme/menu-template.html

@@ -16,6 +16,10 @@ const VenueSchema = new SimpleSchema({
         type: String,
         max: 160,
         label: 'Description'
+    },
+    district: {
+        type: String,
+        label: 'District'
     }
 }, {tracker: Tracker});
 
