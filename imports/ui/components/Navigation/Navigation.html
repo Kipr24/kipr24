@@ -13,6 +13,8 @@
       <ul class="nav navbar-nav">
         {{> EventsNavigation}}
         {{> VenuesNavigation}}
+        {{> CategoriesNavigation}}
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{> loginButtons}}
@@ -57,3 +59,10 @@
   {{/if}}
 
 </template>
+
+<template name="CategoriesNavigation">
+  {{#if isInRole 'admin,editor'}}
+  <li class=""><a href="/categories">Categories</a></li>
+  {{/if}}
+</template>
+

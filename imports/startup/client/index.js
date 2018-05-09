@@ -22,3 +22,7 @@ import '/imports/ui/components/Navigation/Navigation.js';
 // Venue Pages
 import '/imports/ui/pages/VenuesPage/VenuesPage.js'
 import '/imports/ui/pages/NewVenuePage/NewVenuePage.js'
+
+
+// Categories
+import '/imports/ui/pages/CategoriesPage/CategoriesPage.js';

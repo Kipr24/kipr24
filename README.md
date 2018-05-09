@@ -3,10 +3,15 @@ http://kipr24.com application repo
 
 ## BACKLOG ##
 - [x] add district to venues
+- [x] categories collection
+- [x] categories navigation admin menu
+- [x] categories management
+- [ ] categories styling (table/popover)
 - [ ] add category to venue
 - [ ] add location to venues
 - [ ] fileter venues by district
 - [ ] filter venue by category
+- [ ] ...
 
 
 ## stock ##
@@ -31,3 +36,5 @@ https://css-tricks.com/zooming-background-images/
 ### EventsPage bootstrap3 prototype ###
 https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/d60375c3ac5fc459ec7e30a126559d6dd0d26469/index.html
 
+### google+ cards ###
+http://usebootstrap.com/theme/google-plus

@@ -1,11 +1,20 @@
 const authenticated = FlowRouter.group({});
 
+authenticated.route('/categories', {
+  name: 'Cateogories',
+  action() {
+    BlazeLayout.render('MainLayout', {
+      content: 'CategoriesPage'
+    });
+  }
+});
+
 authenticated.route('/events/new', {
   name: 'Event.Add',
   action() {
     BlazeLayout.render('MainLayout', {
       content: 'NewEventPage'
-    })
+    });
   }
 });
 
