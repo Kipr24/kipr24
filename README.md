@@ -6,9 +6,15 @@ http://kipr24.com application repo
 - [x] categories collection
 - [x] categories navigation admin menu
 - [x] categories management
+- [ ] edit venue type focus
 - [ ] categories styling (table/popover)
-- [ ] add category to venue
-- [ ] add location to venues
+- [ ] refactor categories to event categories
+- [ ] venue types
+- [ ] add venue type to venue
+- [ ] add location to venue
+- [ ] event management
+- [ ] add venue to event
+- [ ] add event category to event
 - [ ] fileter venues by district
 - [ ] filter venue by category
 - [ ] ...
@@ -38,3 +44,12 @@ https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/d60375c3ac
 
 ### google+ cards ###
 http://usebootstrap.com/theme/google-plus
+
+### panel with filter ###
+https://bootsnipp.com/snippets/43W9
+
+### timeline ###
+https://bootsnipp.com/snippets/featured/single-column-responsive-timeline
+
+### shuffle.js ### 
+https://vestride.github.io/Shuffle/

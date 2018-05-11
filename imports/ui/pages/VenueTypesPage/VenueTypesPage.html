@@ -1,0 +1,57 @@
+<template name='VenueTypesPage'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Venue Type</div>
+                    <div class="panel-body">
+                        {{> VenueTypesList}}
+                    </div>
+                    <div class="panel-footer">{{> AddVenueTypeForm}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name='AddVenueTypeForm'>
+    <div class="input-group">
+        <form id='add-venue-type' class='form-inline'>
+            <input type="text" name='text' placeholder="Enter venue type here"/>
+        </form>
+    </div>
+</template>
+
+<template name='VenueTypesList'>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each venueTypes}}
+        {{> VenueType}}
+        {{/each}}
+        </tbody>
+    </table>
+</template>
+
+<template name="VenueType">
+    {{#if editing}}
+    <tr>
+        <td></td>
+        <td>
+            <form>
+                <input type="text" name="venue_type" value="{{name}}"/>
+            </form>            
+        </td>
+    </tr>
+    {{else}}
+    <tr>
+        <td><button class="delete">&times;</button></td>
+        <td class="venue-type">{{name}}</td>
+    </tr>
+    {{/if}}
+</template>

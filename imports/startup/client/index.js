@@ -25,4 +25,4 @@ import '/imports/ui/pages/NewVenuePage/NewVenuePage.js'
 
 
 // Categories
-import '/imports/ui/pages/CategoriesPage/CategoriesPage.js';
+import '/imports/ui/pages/VenueTypesPage/VenueTypesPage.js';

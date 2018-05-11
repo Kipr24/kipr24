@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav">
         {{> EventsNavigation}}
         {{> VenuesNavigation}}
-        {{> CategoriesNavigation}}
+        {{> VenueTypesNavigation}}
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -60,9 +60,8 @@
 
 </template>
 
-<template name="CategoriesNavigation">
+<template name="VenueTypesNavigation">
   {{#if isInRole 'admin,editor'}}
-  <li class=""><a href="/categories">Categories</a></li>
+  <li class=""><a href="/venue-types">Venue Types</a></li>
   {{/if}}
 </template>
-

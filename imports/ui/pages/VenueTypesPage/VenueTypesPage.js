@@ -1,39 +1,39 @@
-import Categories from '/imports/api/categories/categories.js';
 import { Template } from 'meteor/templating';
-import '/imports/ui/pages/CategoriesPage/CategoriesPage.html';
+import VenueTypes from '/imports/api/venue_types/venue_types.js';
+import '/imports/ui/pages/VenueTypesPage/VenueTypesPage.html';
 
-Template.CategoriesList.onCreated(function() {
+Template.VenueTypesList.onCreated(function() {
     const tpl = this;
     tpl.autorun(function() { 
-       tpl.subscribe('categories');  
+       tpl.subscribe('venue_types');  
     });
 });
 
-Template.AddCategoryForm.onRendered(function() {
+Template.AddVenueTypeForm.onRendered(function() {
     $('input').focus();
 });
 
-Template.AddCategoryForm.events({ 
-    'submit .add-category': function(event, template) {
+Template.AddVenueTypeForm.events({ 
+    'submit #add-venue-type': function(event, template) {
         event.preventDefault();
         const target = event.target;
         const value = target.text.value;
-        Categories.insert({name: value});
+        VenueTypes.insert({name: value});
         target.text.value = "";
     } 
 });
 
-Template.CategoriesList.helpers({
-    categories: function() {
-        return Categories.find({}, {sort: { name: 1}});
+Template.VenueTypesList.helpers({
+    venueTypes: function() {
+        return VenueTypes.find({}, {sort: { name: 1}});
     }
 });
 
-Template.Category.events({
+Template.VenueType.events({
     'click .delete'(event, template) {
-        Categories.remove({_id: this._id});
+        VenueTypes.remove({_id: this._id});
     },
-    'click .category'(event, template) {
+    'click .venue-type'(event, template) {
         template.editing.set(true);
     },
     'keypress input': function(event, template){
@@ -41,7 +41,7 @@ Template.Category.events({
             event.preventDefault();
             const target = event.target;
             const value = target.value;
-            Categories.update({_id: this._id}, {$set: {name: value}});
+            VenueTypes.update({_id: this._id}, {$set: {name: value}});
             template.editing.set(false);
         }
         else if(event.keyCode === 27){
@@ -49,10 +49,12 @@ Template.Category.events({
         }
       }
 });
-Template.Category.onCreated(function() {
+
+Template.VenueType.onCreated(function() {
     this.editing = new ReactiveVar(false);
 });
-Template.Category.helpers({
+
+Template.VenueType.helpers({
     editing: function() {
         return Template.instance().editing.get();
     }

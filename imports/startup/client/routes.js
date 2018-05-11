@@ -1,10 +1,10 @@
 const authenticated = FlowRouter.group({});
 
-authenticated.route('/categories', {
-  name: 'Cateogories',
+authenticated.route('/venue-types', {
+  name: 'VenueTypes',
   action() {
     BlazeLayout.render('MainLayout', {
-      content: 'CategoriesPage'
+      content: 'VenueTypesPage'
     });
   }
 });

@@ -1,13 +1,13 @@
-// /imports/api/categories/categories.js
+// /imports/api/venue_types/venue_types.js
 import { Mongo } from 'meteor/mongo';
 import { Tracker } from 'meteor/tracker';
 import SimpleSchema from 'simpl-schema';
 
 SimpleSchema.extendOptions(['autoform']);
 
-const Categories = new Mongo.Collection('categories');
+const VenueTypes = new Mongo.Collection('venue_types');
 
-const CategoriesSchema = new SimpleSchema({
+const VenueTypesSchema = new SimpleSchema({
     name: {
         type: String,
         max: 20,
@@ -15,9 +15,9 @@ const CategoriesSchema = new SimpleSchema({
     }
 }, {tracker: Tracker});
 
-Categories.attachSchema(CategoriesSchema);
+VenueTypes.attachSchema(VenueTypesSchema);
 
-Categories.allow({ 
+VenueTypes.allow({ 
     insert: function() { 
         return true; 
     }, 
@@ -29,4 +29,4 @@ Categories.allow({
     } 
 });
 
-export default Categories;
+export default VenueTypes;
